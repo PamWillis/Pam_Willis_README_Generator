@@ -1,4 +1,5 @@
-// TODO: Include packages needed for this application
+import { generateMarkdown } from "/utils/generateMarkdown.js"; 
+
 const inquirer = require(`inquirer`);
 const fs = require('fs');
 // TODO: Create an array of questions for user input
@@ -50,7 +51,9 @@ inquirer
             type: 'checkbox',
             name: 'license',
             message: 'choose license',
-            choices: ['MIT', 'Apache_2', 'Boost', 'BSD_3-Clause', 'BSD_2-Clause', 'The_Aritistic_License_2',]
+            choices: ['apache', 'Boost', 'The MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License',
+             'Creative Commons 1.0', 'Eclipse Public License 1.0', 'GNU AGPL v3', 'GNU GPL v3',
+            'GNU GPL v2', 'Mozilla Public License 2.0', 'Unlicensed']
         },
         {
             type: 'text',
@@ -73,8 +76,6 @@ inquirer
             message: 'list tests created:',
         },
     ])
-
-
         // TODO: Create a function to write README file
         
         .then((data) => {
