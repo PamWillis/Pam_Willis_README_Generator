@@ -13,28 +13,23 @@ inquirer
         },
         {
             type: 'text',
-            name: 'description',
-            message: 'Provide a short description explaining the what whay, and how of your project. Use the following as a guide:',
-        },
-        {
-            type: 'text',
             name: 'motivation',
-            message: 'Provide a short description explaining the what whay, and how of your project. Use the following as a guide:',
+            message: 'Description: what was your motivation for creating',
         },
         {
             type: 'text',
             name: 'why',
-            message: 'Why did you build the project?',
+            message: 'Description: why did you build the project?',
         },
         {
             type: 'text',
             name: 'what',
-            message: 'What problem does it solve?',
+            message: 'Description: what problem does it solve?',
         },
         {
             type: 'text',
             name: 'learn',
-            message: 'What did you learn?',
+            message: 'Description: what did you learn?',
         },
         {
             type: 'text',
@@ -83,10 +78,6 @@ inquirer
         // TODO: Create a function to write README file
         
         .then((data) => {
-            (answers)=> {
-                console.info('Answers:', answers.license)
-            }
-            // const filename = `README.md`;
             const filename = `${data.title.toLowerCase().split(' ').join('_')}.md`;
     // function writeToFile(fileName, data) { }
     fs.writeFile(filename, createMD(data), (err) =>
@@ -96,16 +87,15 @@ inquirer
         
 
 // TODO: Create a function to initialize app
-function createMD() { 
+function createMD(data, answers) { 
     return `
-# <${data.title}>
+# ${data.title}
 
 ## Description
-<${data.description}>
-- <${data.motivation}>
-- <${data.why}>
-- <${data.what}>
-- <${data.learn}>
+- ${data.motivation}
+- ${data.why}
+- ${data.what}
+- ${data.learn}
 
 ## Table of Contents
 - [Installation](#installation)
@@ -114,25 +104,25 @@ function createMD() {
 - [License](#license)
 
 ## Installation
-<${data.installation}>
+${data.installation}
 
 ## Usage
-<${data.usage}>
+${data.usage}
 <mockup>![MockUp](placecard.png)
 
 ## Credits
-<${data.credits}>
+${data.credits}
 
 ## License
-<${answers.license}>
+${data.license}
 
 ## Features
-<${data.features}>
+${data.features}
 
 ## Directions to Contribute
-<${data.contribution}>
+${data.contribution}
 
 ## Tests
-<${data.tests}>`
+${data.tests}`
 
 }
