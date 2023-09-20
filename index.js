@@ -83,7 +83,7 @@ inquirer
         
 
 // TODO: Create a function to initialize app
-function createMD(data, answers) { 
+function createMD(data) { 
     return `
 # ${data.title}
 # ${data.badge}
