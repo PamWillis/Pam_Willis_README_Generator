@@ -90,6 +90,7 @@ inquirer
 function createMD(data, answers) { 
     return `
 # ${data.title}
+${data.badge}
 
 ## Description
 - ${data.motivation}

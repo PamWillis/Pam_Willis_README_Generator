@@ -1,76 +1,75 @@
 //objects to describe choice
-function license() {
-  const choice1 = {
-  title: "apache 2.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator//community/license/new?branch=main&filename=LICENSE&template=apache-2.0"
-  };
-  const choice2 = {
-  title: "GNU General Public License v3.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=gpl-3.0"
-  };
-  const choice3 = {
-  title: "MIT License",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=mit"
-  };
-  const choice4 = {
-  title: "BSD 2 Clause Simplified",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=bsd-2-clause"
-  };
-  const choice5 = {
-  title: "BSD 3 Clause New or Revised",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=bsd-3-clause"
-  };
-  const choice6 = {
-  title: "Boost Software License 1.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=bsl-1.0"
-  };
-  const choice7 = {
-  title: "Creative Commons Zero v1.0 Universal",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=cc0-1.0"
-  };
-  const choice8 = {
-  title: "Eclipse Public License 2.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=epl-2.0"
-  };
-  const choice9 = {
-  title: "GNU Affero General Public License v3.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=agpl-3.0"
-  };
-  const choice10 = {
-  title: "GNU General Public License v2.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=gpl-2.0"
-  }
-  const choice11 = {
-  title: "GNU Lesser General Public License v2.1",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=lgpl-2.1"
-  };
-  const choice13 = {
-  title: "Mozilla Public License 2.0",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=mpl-2.0"
-  };
-  const choice14 = {
-  title: "The Unlicensed",
-  link: "https://github.com/PamWillis/Pam_Willis_README_Generator/community/license/new?branch=main&filename=LICENSE&template=unlicense"
-  };
-  }
-  
-  
-  // TODO: Create a function that returns a license badge based on which license is passed in
+const license = [
+  choice = {
+    title: "apache",
+    link: "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+  },
+  choice = {
+    title: "Boost",
+    link: "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+  },
+  choice = {
+    title: "The MIT License",
+    link: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+  },
+  choice = {
+    title: "BSD 2-Clause License",
+    link: "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)"
+  },
+  choice = {
+    title: "BSD 3-Clause License",
+    link: "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+  },
+  choice = {
+    title: "Boost Software License 1.0",
+    link: "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+  },
+  choice = {
+    title: "Creative Commons 1.0",
+    link: "[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)"
+  },
+  choice = {
+    title: "Eclipse Public License 1.0",
+    link: "[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)"
+  },
+  choice = {
+    title: "GNU AGPL v3",
+    link: "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)"
+  },
+  choice = {
+    title: "GNU GPL v3",
+    link: "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+  },
+  choice = {
+    title: "GNU GPL v2",
+    link: "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)"
+  },
+  choice = {
+    title: "Mozilla Public License 2.0",
+    link: "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+  },
+  choice = {
+    title: "Unlicensed",
+    link: "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+  },
+]
+
+
+// TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  for (i = 0; i < license.length; i++) {
-    if (i === 0) {
-      
+  license.forEach(choice.link.split('] ('));
 
-    }
   }
-}
+  console.log(renderLicenseBadge)
+
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   //generate license page and badge
- }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
