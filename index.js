@@ -112,7 +112,7 @@ ${data.usage}
 ${data.credits}
 
 ## License
-${data.license}
+${data.link}
 
 ## Features
 ${data.features}
