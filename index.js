@@ -1,4 +1,4 @@
-import { generateMarkdown } from "/utils/generateMarkdown.js"; 
+const generateMarkdown = require("./utils/generateMarkdown")
 
 const inquirer = require(`inquirer`);
 const fs = require('fs');
@@ -52,13 +52,8 @@ inquirer
             name: 'license',
             message: 'choose license',
             choices: ['apache', 'Boost', 'The MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License',
-             'Creative Commons 1.0', 'Eclipse Public License 1.0', 'GNU AGPL v3', 'GNU GPL v3',
+             'Creative Commons 1.0', 'Eclipse Public License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3',
             'GNU GPL v2', 'Mozilla Public License 2.0', 'Unlicensed']
-        },
-        {
-            type: 'text',
-            name: 'badges',
-            message: 'list badges:',
         },
         {
             type: 'text',
@@ -91,7 +86,7 @@ inquirer
 function createMD(data, answers) { 
     return `
 # ${data.title}
-${data.badge}
+# ${data.badge}
 
 ## Description
 - ${data.motivation}
