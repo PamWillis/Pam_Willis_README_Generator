@@ -74,8 +74,9 @@ inquirer
         // TODO: Create a function to write README file
         
         .then((data) => {
+            console.log('DATA', data);
             const filename = `${data.title.toLowerCase().split(' ').join('_')}.md`;
-    // function writeToFile(fileName, data) { }
+
     fs.writeFile(filename, createMD(data), (err) =>
     err ? console.log(err) : ('Success!')
   );
