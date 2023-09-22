@@ -46,9 +46,9 @@ inquirer
             type: 'list',
             name: 'license',
             message: 'choose license',
-            choices: ['Apache', 'Boost', 'The MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License',
+            choices: ['Unlicensed', 'Apache', 'Boost', 'The MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License',
              'Creative Commons 1.0', 'Eclipse Public License 1.0', 'Eclipse Public License 1.0', 'GNU GPL v3',
-            'GNU GPL v2', 'Mozilla Public License 2.0', 'Unlicensed'],
+            'GNU GPL v2', 'Mozilla Public License 2.0'],
             
         },
         {
@@ -73,7 +73,7 @@ inquirer
         },
 
     ])
-        // TODO: Create a function to write README file
+  // function to write README file
         
         .then((data) => {
             
@@ -88,9 +88,3 @@ inquirer
 });
         
 
-// TODO: Create a function to initialize app
-function createMD(data) { 
-    return `
-`
-
-}
